@@ -1,0 +1,878 @@
+/* =========================================================
+   CAREERAI - RESUME BUILDER
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.resume-builder-page {
+  min-height: 100vh;
+  padding: 40px 5% 70px;
+  background: #f4f6fa;
+  color: #172033;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.resume-builder-header {
+  max-width: 1450px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #dfe4ec;
+}
+
+.resume-builder-badge {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: #eaf0ff;
+  color: #1d4ed8;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.resume-builder-header h1 {
+  margin: 12px 0 7px;
+
+  color: #0b1930;
+
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.resume-builder-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.resume-builder-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clear-resume-btn,
+.download-resume-btn {
+  height: 44px;
+
+  padding: 0 18px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.clear-resume-btn {
+  background: #ffffff;
+
+  border: 1px solid #d7dde7;
+
+  color: #475569;
+}
+
+.clear-resume-btn:hover {
+  background: #f8fafc;
+  border-color: #b8c1cf;
+}
+
+.download-resume-btn {
+  border: none;
+
+  background: #dc2626;
+
+  color: #ffffff;
+
+  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.18);
+}
+
+.download-resume-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.download-resume-btn.large {
+  height: 48px;
+  padding: 0 25px;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.resume-builder-layout {
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(480px, 0.9fr);
+
+  gap: 28px;
+
+  align-items: start;
+}
+
+/* =========================================================
+   FORM PANEL
+========================================================= */
+
+.resume-form-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.resume-form-section {
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ee;
+
+  border-radius: 12px;
+
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.form-section-heading {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  margin-bottom: 22px;
+}
+
+.form-section-heading > span {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #eff4ff;
+
+  color: #1d4ed8;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.form-section-heading h2 {
+  margin: 0 0 4px;
+
+  color: #172033;
+
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.form-section-heading p {
+  margin: 0;
+
+  color: #7b8798;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #344054;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #d8dee8;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.form-group input {
+  height: 44px;
+  padding: 0 13px;
+}
+
+.form-group textarea {
+  min-height: 105px;
+
+  padding: 12px 13px;
+
+  resize: vertical;
+
+  line-height: 1.55;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a0a9b8;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: #b7c0cf;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.09);
+}
+
+/* =========================================================
+   DYNAMIC FORM CARD
+========================================================= */
+
+.dynamic-form-card {
+  margin-bottom: 15px;
+
+  padding: 19px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e7ef;
+
+  border-radius: 9px;
+}
+
+.dynamic-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+.dynamic-form-header h3 {
+  margin: 0;
+
+  color: #243047;
+
+  font-size: 15px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   REMOVE BUTTON
+========================================================= */
+
+.remove-btn {
+  padding: 6px 11px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 6px;
+
+  background: #fff5f5;
+
+  color: #dc2626;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.add-section-btn {
+  width: 100%;
+  height: 42px;
+
+  border: 1px dashed #9db6e8;
+
+  border-radius: 8px;
+
+  background: #f7faff;
+
+  color: #1d4ed8;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-section-btn:hover {
+  background: #eff6ff;
+
+  border-color: #2563eb;
+}
+
+/* =========================================================
+   BOTTOM ACTION
+========================================================= */
+
+.form-bottom-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 5px 0 15px;
+}
+
+/* =========================================================
+   PREVIEW PANEL
+========================================================= */
+
+.resume-preview-panel {
+  position: sticky;
+  top: 20px;
+
+  padding: 20px;
+
+  background: #172033;
+
+  border-radius: 12px;
+
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.14);
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.preview-header > div > span {
+  color: #93c5fd;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.preview-header h2 {
+  margin: 4px 0 0;
+
+  color: #ffffff;
+
+  font-size: 21px;
+}
+
+.preview-download-btn {
+  height: 36px;
+
+  padding: 0 13px;
+
+  border: 1px solid #ef4444;
+
+  border-radius: 7px;
+
+  background: #dc2626;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.preview-download-btn:hover {
+  background: #b91c1c;
+}
+
+/* =========================================================
+   PREVIEW AREA
+========================================================= */
+
+.resume-preview-wrapper {
+  padding: 18px;
+
+  background: #0b1220;
+
+  border-radius: 8px;
+
+  overflow-x: auto;
+}
+
+/* =========================================================
+   A4 RESUME PAPER
+========================================================= */
+
+.resume-paper {
+  width: 794px;
+  min-height: 1123px;
+
+  margin: 0 auto;
+
+  padding: 55px 58px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   RESUME HEADER
+========================================================= */
+
+.resume-paper-header {
+  padding-bottom: 17px;
+
+  border-bottom: 2px solid #1e3a8a;
+}
+
+.resume-paper-header h1 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 31px;
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+.resume-paper-header h2 {
+  margin: 6px 0 12px;
+
+  color: #dc2626;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.resume-contact,
+.resume-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 4px 12px;
+
+  color: #475569;
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.resume-contact span:not(:last-child)::after,
+.resume-links span:not(:last-child)::after {
+  content: "•";
+
+  margin-left: 12px;
+
+  color: #94a3b8;
+}
+
+/* =========================================================
+   RESUME SECTION
+========================================================= */
+
+.resume-paper-section {
+  margin-top: 18px;
+}
+
+.resume-paper-section h3 {
+  margin: 0 0 9px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #d4dae3;
+
+  color: #1e3a8a;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.resume-paper-section > p {
+  margin: 0;
+
+  color: #374151;
+
+  font-size: 9.5px;
+
+  line-height: 1.65;
+
+  white-space: pre-line;
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.resume-skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+.resume-skills span {
+  padding: 4px 7px;
+
+  border-radius: 3px;
+
+  background: #eff6ff;
+
+  border: 1px solid #dbeafe;
+
+  color: #1e3a8a;
+
+  font-size: 8.5px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESUME ITEMS
+========================================================= */
+
+.resume-experience-item,
+.resume-project-item,
+.resume-education-item {
+  margin-bottom: 13px;
+
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.resume-experience-item:last-child,
+.resume-project-item:last-child,
+.resume-education-item:last-child {
+  margin-bottom: 0;
+}
+
+.resume-item-heading {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.resume-item-heading h4 {
+  margin: 0 0 3px;
+
+  color: #111827;
+
+  font-size: 10.5px;
+  font-weight: 800;
+}
+
+.resume-item-heading strong {
+  color: #475569;
+
+  font-size: 8.8px;
+}
+
+.resume-item-meta {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 2px;
+
+  color: #64748b;
+
+  font-size: 8px;
+
+  text-align: right;
+}
+
+.resume-experience-item p,
+.resume-project-item p,
+.resume-education-item p {
+  margin: 5px 0 0;
+
+  color: #475569;
+
+  font-size: 8.8px;
+
+  line-height: 1.6;
+
+  white-space: pre-line;
+}
+
+/* =========================================================
+   PROJECT LINK
+========================================================= */
+
+.project-link {
+  max-width: 160px;
+
+  color: #1d4ed8;
+
+  font-size: 8px;
+
+  word-break: break-word;
+
+  text-align: right;
+}
+
+/* =========================================================
+   CERTIFICATIONS
+========================================================= */
+
+.resume-certification-item {
+  margin-bottom: 6px;
+
+  color: #475569;
+
+  font-size: 8.8px;
+
+  line-height: 1.5;
+}
+
+.resume-certification-item strong {
+  color: #111827;
+}
+
+/* =========================================================
+   PDF PAGE BREAK
+========================================================= */
+
+.resume-paper-section,
+.resume-experience-item,
+.resume-project-item,
+.resume-education-item,
+.resume-certification-item {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+  .resume-builder-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-preview-panel {
+    position: static;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .resume-builder-page {
+    padding: 25px 4% 50px;
+  }
+
+  .resume-builder-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-builder-header h1 {
+    font-size: 32px;
+  }
+
+  .resume-builder-header-actions {
+    width: 100%;
+  }
+
+  .resume-builder-header-actions button {
+    flex: 1;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .resume-form-section {
+    padding: 20px;
+  }
+
+  .resume-preview-panel {
+    padding: 12px;
+  }
+
+  .resume-preview-wrapper {
+    padding: 8px;
+  }
+
+  .form-bottom-actions {
+    justify-content: stretch;
+  }
+
+  .form-bottom-actions button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .resume-builder-header-actions {
+    flex-direction: column;
+  }
+
+  .resume-builder-header-actions button {
+    width: 100%;
+  }
+
+  .dynamic-form-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .remove-btn {
+    width: 100%;
+  }
+
+  .preview-header {
+    gap: 10px;
+  }
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  .resume-builder-page {
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .resume-builder-header,
+  .resume-form-panel,
+  .preview-header {
+    display: none !important;
+  }
+
+  .resume-builder-layout {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .resume-preview-panel {
+    padding: 0;
+    background: #ffffff;
+    box-shadow: none;
+  }
+
+  .resume-preview-wrapper {
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .resume-paper {
+    margin: 0;
+    box-shadow: none;
+  }
+}

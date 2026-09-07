@@ -1,0 +1,255 @@
+/* =========================================
+   ADMIN LAYOUT
+========================================= */
+
+.admin-layout {
+    min-height: 100vh;
+
+    display: flex;
+
+    background: #f5f7fb;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.admin-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 250px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #071a33 0%,
+            #0b2a4a 100%
+        );
+
+    color: white;
+
+    padding: 25px 15px;
+
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.admin-logo {
+    padding: 0 15px 28px;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    color: white;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.12);
+}
+
+.admin-logo span {
+    color: #ff4d5a;
+}
+
+
+/* NAVIGATION */
+
+.admin-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+.admin-nav a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    color: #cbd6e4;
+
+    font-size: 14px;
+
+    font-weight: 550;
+
+    transition: 0.2s ease;
+}
+
+.admin-nav a:hover {
+    background:
+        rgba(230,57,70,0.15);
+
+    color: white;
+}
+
+.admin-nav a.active {
+    background: #e63946;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(230,57,70,0.25);
+}
+
+
+/* =========================================
+   MAIN AREA
+========================================= */
+
+.admin-main {
+    width: calc(100% - 250px);
+
+    margin-left: 250px;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.admin-navbar {
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    background: white;
+
+    border-bottom:
+        1px solid #e1e6ed;
+
+    box-shadow:
+        0 3px 15px rgba(7,26,51,0.04);
+}
+
+.admin-navbar h2 {
+    color: #071a33;
+
+    font-size: 18px;
+}
+
+.admin-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.admin-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #071a33;
+
+    color: white;
+
+    font-weight: 700;
+}
+
+.admin-user-name {
+    color: #071a33;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.admin-user-role {
+    color: #6b7890;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.admin-logout {
+    padding: 9px 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #fff0f1;
+
+    color: #e63946;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.admin-logout:hover {
+    background: #e63946;
+
+    color: white;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .admin-sidebar {
+        width: 70px;
+
+        padding: 20px 10px;
+    }
+
+    .admin-logo {
+        text-align: center;
+
+        padding: 10px 0;
+    }
+
+    .admin-logo span,
+    .admin-nav a span {
+        display: none;
+    }
+
+    .admin-nav a {
+        justify-content: center;
+
+        padding: 14px 8px;
+    }
+
+    .admin-main {
+        width: calc(100% - 70px);
+
+        margin-left: 70px;
+    }
+}

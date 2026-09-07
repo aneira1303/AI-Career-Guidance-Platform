@@ -1,0 +1,40 @@
+.career-empty {
+    min-height: 400px;
+
+    background: white;
+
+    border:
+        1px solid #eaecf0;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.career-empty svg {
+    color: #c62828;
+
+    margin-bottom: 15px;
+}
+
+.career-empty h2 {
+    margin-bottom: 10px;
+}
+
+.career-empty p {
+    max-width: 550px;
+
+    color: #667085;
+
+    line-height: 1.7;
+}

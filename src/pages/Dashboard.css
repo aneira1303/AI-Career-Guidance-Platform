@@ -1,0 +1,795 @@
+/* =========================================================
+   CAREER AI - DASHBOARD
+   Dark Navy + Red + Blue Theme
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(30, 64, 175, 0.18), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(220, 38, 38, 0.12), transparent 28%),
+    #07111f;
+  color: #f8fafc;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.dashboard-navbar {
+  width: 100%;
+  min-height: 76px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(7, 17, 31, 0.92);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(16px);
+}
+
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+
+  position: relative;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 34px;
+  height: 3px;
+  border-radius: 10px;
+  background: #ef4444;
+}
+
+.dashboard-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.dashboard-nav-right span {
+  font-weight: 500;
+}
+
+.logout-button {
+  border: 1px solid rgba(239, 68, 68, 0.45);
+  background: rgba(127, 29, 29, 0.25);
+  color: #fca5a5;
+
+  padding: 10px 18px;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.logout-button:hover {
+  background: #dc2626;
+  border-color: #ef4444;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.dashboard-content {
+  width: min(1400px, 92%);
+  margin: 0 auto;
+  padding: 65px 0 90px;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.dashboard-heading {
+  margin-bottom: 38px;
+  max-width: 800px;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 13px;
+  border-radius: 999px;
+
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+
+  color: #f87171;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-heading h1 {
+  margin: 16px 0 10px;
+
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+
+  color: #ffffff;
+}
+
+.dashboard-heading p {
+  margin: 0;
+
+  color: #94a3b8;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   AI INTELLIGENCE CARD
+========================================================= */
+
+.intelligence-dashboard-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 25px;
+
+  margin-bottom: 55px;
+  padding: 32px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(30, 58, 138, 0.35),
+      rgba(15, 23, 42, 0.9)
+    );
+
+  border: 1px solid rgba(59, 130, 246, 0.25);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  overflow: hidden;
+}
+
+.intelligence-dashboard-card::before {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -70px;
+  top: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.18);
+  filter: blur(5px);
+}
+
+.intelligence-dashboard-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #1d4ed8,
+    #dc2626
+  );
+
+  font-size: 32px;
+
+  box-shadow:
+    0 12px 35px rgba(30, 64, 175, 0.35);
+}
+
+.intelligence-dashboard-card h2 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.intelligence-dashboard-card p {
+  max-width: 720px;
+  margin: 0;
+
+  color: #94a3b8;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 0 20px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(
+    135deg,
+    #dc2626,
+    #ef4444
+  );
+
+  color: #ffffff;
+
+  border: 1px solid rgba(248, 113, 113, 0.3);
+
+  box-shadow:
+    0 10px 25px rgba(220, 38, 38, 0.22);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(220, 38, 38, 0.35);
+
+  background: linear-gradient(
+    135deg,
+    #ef4444,
+    #f87171
+  );
+}
+
+.secondary-btn {
+  background: rgba(30, 41, 59, 0.7);
+  color: #dbeafe;
+
+  border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+
+  background: rgba(37, 99, 235, 0.18);
+
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-bottom: 80px;
+}
+
+/* =========================================================
+   DASHBOARD CARDS
+========================================================= */
+
+.dashboard-card {
+  position: relative;
+
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 27px;
+
+  text-decoration: none;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 30, 50, 0.95),
+      rgba(9, 20, 35, 0.95)
+    );
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  overflow: hidden;
+}
+
+.dashboard-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #dc2626,
+    #2563eb
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(59, 130, 246, 0.35);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  background: rgba(30, 64, 175, 0.15);
+
+  border: 1px solid rgba(59, 130, 246, 0.2);
+
+  font-size: 25px;
+}
+
+.dashboard-card h2 {
+  margin: 0 0 11px;
+
+  color: #f8fafc;
+
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.dashboard-card p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  line-height: 1.65;
+  font-size: 14px;
+
+  flex: 1;
+}
+
+.card-link {
+  margin-top: 22px;
+
+  color: #60a5fa;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: color 0.25s ease;
+}
+
+.dashboard-card:hover .card-link {
+  color: #f87171;
+}
+
+/* =========================================================
+   PIPELINE SECTION
+========================================================= */
+
+.dashboard-pipeline {
+  margin-bottom: 70px;
+  padding: 45px 40px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10, 25, 44, 0.98),
+      rgba(7, 17, 31, 0.98)
+    );
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-section-heading {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.dashboard-section-heading h2 {
+  margin: 14px 0 10px;
+
+  color: #ffffff;
+
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.dashboard-section-heading p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PIPELINE GRID
+========================================================= */
+
+.pipeline-dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr auto
+    1fr auto
+    1fr auto
+    1fr auto
+    1fr auto
+    1fr;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.pipeline-dashboard-step {
+  min-height: 230px;
+
+  padding: 24px 20px;
+
+  border-radius: 15px;
+
+  background: rgba(15, 30, 50, 0.8);
+
+  border: 1px solid rgba(96, 165, 250, 0.13);
+
+  transition: all 0.25s ease;
+}
+
+.pipeline-dashboard-step:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(239, 68, 68, 0.35);
+
+  background: rgba(20, 35, 58, 0.95);
+}
+
+.pipeline-dashboard-step > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #ef4444;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.pipeline-dashboard-step > div {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.pipeline-dashboard-step h3 {
+  margin: 0 0 9px;
+
+  color: #f8fafc;
+
+  font-size: 16px;
+}
+
+.pipeline-dashboard-step p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.pipeline-dashboard-arrow {
+  color: #3b82f6;
+
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   RESUME CAREER CTA
+========================================================= */
+
+.resume-career-cta {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 45px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(127, 29, 29, 0.35),
+      rgba(30, 58, 138, 0.35)
+    );
+
+  border: 1px solid rgba(239, 68, 68, 0.2);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+}
+
+.resume-career-cta h2 {
+  margin: 15px 0;
+
+  color: #ffffff;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  letter-spacing: -1.2px;
+}
+
+.resume-career-cta p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #cbd5e1;
+
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.resume-career-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .pipeline-dashboard-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .pipeline-dashboard-arrow {
+    display: none;
+  }
+
+  .pipeline-dashboard-step {
+    min-height: 210px;
+  }
+
+  .resume-career-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-career-actions {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+  .dashboard-navbar {
+    padding: 0 5%;
+  }
+
+  .dashboard-nav-right span {
+    display: none;
+  }
+
+  .dashboard-content {
+    width: 90%;
+    padding-top: 45px;
+  }
+
+  .dashboard-heading h1 {
+    font-size: 38px;
+  }
+
+  .dashboard-heading p {
+    font-size: 16px;
+  }
+
+  .intelligence-dashboard-card {
+    grid-template-columns: 1fr;
+
+    padding: 25px;
+  }
+
+  .intelligence-dashboard-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .intelligence-dashboard-card .primary-btn {
+    width: 100%;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .dashboard-card {
+    min-height: 250px;
+  }
+
+  .dashboard-pipeline {
+    padding: 30px 20px;
+  }
+
+  .dashboard-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .pipeline-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pipeline-dashboard-step {
+    min-height: auto;
+  }
+
+  .resume-career-cta {
+    padding: 30px 25px;
+  }
+
+  .resume-career-cta h2 {
+    font-size: 30px;
+  }
+
+  .resume-career-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .resume-career-actions a {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .dashboard-navbar {
+    min-height: 68px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .logout-button {
+    padding: 8px 13px;
+  }
+
+  .dashboard-heading h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .intelligence-dashboard-card h2 {
+    font-size: 21px;
+  }
+
+  .dashboard-card {
+    padding: 22px;
+  }
+
+  .resume-career-cta h2 {
+    font-size: 27px;
+  }
+}
