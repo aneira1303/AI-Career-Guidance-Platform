@@ -294,7 +294,7 @@ function Login() {
                         <Link
                             to="/forgot-password"
                         >
-                            Forgot Password?
+                            Try the app!
                         </Link>
 
                     </div>
