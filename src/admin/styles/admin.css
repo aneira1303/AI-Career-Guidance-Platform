@@ -1,0 +1,783 @@
+/* =====================================================
+   CAREERAI ADMIN PANEL
+   DARK BLUE + RED
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #071a33;
+    --navy-light: #0b2a4a;
+    --blue: #123b63;
+
+    --red: #e63946;
+    --red-dark: #c92836;
+    --red-light: #fff0f1;
+
+    --white: #ffffff;
+    --bg: #f4f7fb;
+
+    --text: #14213d;
+    --muted: #718096;
+
+    --border: #e2e8f0;
+
+    --shadow:
+        0 10px 30px rgba(7, 26, 51, 0.08);
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    margin: 0;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+}
+
+
+/* =====================================================
+   ADMIN LAYOUT
+===================================================== */
+
+.admin-layout {
+    min-height: 100vh;
+
+    display: flex;
+
+    background: var(--bg);
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.admin-sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 250px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #071a33 0%,
+            #0b2a4a 100%
+        );
+
+    color: white;
+
+    padding: 25px 15px;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+}
+
+
+/* Logo */
+
+.admin-logo {
+    padding: 8px 15px 25px;
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.12);
+}
+
+.admin-logo span {
+    color: var(--red);
+}
+
+
+/* Sidebar navigation */
+
+.admin-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-top: 25px;
+}
+
+.admin-nav a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.admin-nav a:hover {
+    background:
+        rgba(230, 57, 70, 0.15);
+
+    color: white;
+
+    transform: translateX(3px);
+}
+
+.admin-nav a.active {
+    background: var(--red);
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(230,57,70,0.25);
+}
+
+
+/* =====================================================
+   ADMIN MAIN
+===================================================== */
+
+.admin-main {
+    width: calc(100% - 250px);
+
+    margin-left: 250px;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.admin-navbar {
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    background: white;
+
+    border-bottom:
+        1px solid var(--border);
+
+    box-shadow:
+        0 3px 15px rgba(7,26,51,0.05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 500;
+}
+
+.admin-navbar h2 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 20px;
+}
+
+
+/* User */
+
+.admin-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.admin-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-weight: 800;
+}
+
+.admin-user-name {
+    color: var(--navy);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.admin-user-role {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* Logout */
+
+.admin-logout {
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    background: var(--red-light);
+
+    color: var(--red);
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.admin-logout:hover {
+    background: var(--red);
+
+    color: white;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.admin-page {
+    min-height: calc(100vh - 72px);
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f7fb,
+            #ffffff
+        );
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 34px;
+
+    font-weight: 800;
+}
+
+.page-header h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 4px;
+
+    margin-top: 8px;
+
+    border-radius: 10px;
+
+    background: var(--red);
+}
+
+.page-header p {
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================================
+   STAT CARD
+===================================================== */
+
+.stat-card {
+    position: relative;
+
+    min-height: 160px;
+
+    padding: 22px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    transition: 0.25s ease;
+}
+
+.stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--navy),
+            var(--red)
+        );
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(7,26,51,0.14);
+}
+
+.stat-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.stat-card-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: var(--red-light);
+
+    font-size: 23px;
+}
+
+.stat-card-change {
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: var(--red-light);
+
+    color: var(--red);
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.stat-card-title {
+    margin: 18px 0 4px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.stat-card-value {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   LOWER DASHBOARD
+===================================================== */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.35fr 1fr;
+
+    gap: 24px;
+}
+
+
+/* =====================================================
+   PANELS
+===================================================== */
+
+.admin-panel {
+    position: relative;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+.admin-panel::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--navy),
+            var(--red)
+        );
+}
+
+
+/* =====================================================
+   PANEL HEADER
+===================================================== */
+
+.panel-header {
+    padding-bottom: 18px;
+
+    margin-bottom: 20px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.panel-header h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+.panel-header p {
+    margin: 5px 0 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   ACTIVITY
+===================================================== */
+
+.activity-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.activity-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    border: 1px solid transparent;
+
+    transition: 0.2s;
+}
+
+.activity-item:hover {
+    background: var(--red-light);
+
+    border-color: #ffd1d5;
+
+    transform: translateX(4px);
+}
+
+.activity-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--red-light);
+
+    border-radius: 12px;
+
+    font-size: 21px;
+}
+
+.activity-item strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 14px;
+}
+
+.activity-item small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CAREER RANKING
+===================================================== */
+
+.career-ranking {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.career-ranking > div {
+    display: grid;
+
+    grid-template-columns:
+        42px 1fr auto;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    border: 1px solid transparent;
+
+    transition: 0.2s;
+}
+
+.career-ranking > div:hover {
+    background: var(--red-light);
+
+    border-color: #ffd1d5;
+
+    transform: translateX(4px);
+}
+
+.career-ranking span {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.career-ranking strong {
+    color: var(--navy);
+
+    font-size: 14px;
+}
+
+.career-ranking b {
+    color: var(--red);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .admin-sidebar {
+        width: 70px;
+    }
+
+    .admin-main {
+        width: calc(100% - 70px);
+
+        margin-left: 70px;
+    }
+
+    .admin-logo {
+        padding: 10px;
+
+        text-align: center;
+
+        font-size: 20px;
+    }
+
+    .admin-nav a {
+        justify-content: center;
+
+        padding: 13px;
+    }
+
+    .admin-nav a span,
+    .admin-logo span {
+        display: none;
+    }
+
+    .admin-page {
+        padding: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .admin-navbar {
+        padding: 0 15px;
+    }
+
+    .admin-page {
+        padding: 15px;
+    }
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+    .dashboard-grid {
+        gap: 15px;
+    }
+}

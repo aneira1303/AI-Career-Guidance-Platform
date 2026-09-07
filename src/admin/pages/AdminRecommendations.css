@@ -1,0 +1,252 @@
+.admin-recommendations-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f4f6f8;
+  box-sizing: border-box;
+}
+
+.recommendations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.recommendations-header h1 {
+  margin: 0;
+  color: #071b33;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.recommendations-header p {
+  margin: 7px 0 0;
+  color: #6b7280;
+}
+
+.recommendations-refresh-btn {
+  border: none;
+  background: #071b33;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.recommendations-refresh-btn:hover {
+  background: #102d4f;
+}
+
+.recommendations-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border-left: 4px solid #ed2939;
+  margin-bottom: 20px;
+}
+
+.recommendation-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.recommendation-stat {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+  border-left: 4px solid #ed2939;
+}
+
+.recommendation-stat span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.recommendation-stat strong {
+  font-size: 26px;
+  color: #071b33;
+}
+
+.recommendations-card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.recommendations-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.recommendations-toolbar input,
+.recommendations-toolbar select {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.recommendations-toolbar input {
+  flex: 1;
+}
+
+.recommendations-toolbar input:focus,
+.recommendations-toolbar select:focus {
+  border-color: #ed2939;
+}
+
+.recommendations-table-wrapper {
+  overflow-x: auto;
+}
+
+.recommendations-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 950px;
+}
+
+.recommendations-table th {
+  background: #071b33;
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.recommendations-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+}
+
+.recommendations-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.recommendation-user {
+  font-weight: 700;
+  color: #071b33 !important;
+}
+
+.recommendation-career {
+  font-weight: 600;
+  color: #071b33 !important;
+}
+
+.recommendation-score {
+  display: inline-block;
+  min-width: 55px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.score-high {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.score-medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.score-low {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.recommendation-delete {
+  border: none;
+  background: #ed2939;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.recommendation-delete:hover {
+  background: #d62032;
+}
+
+.recommendations-loading {
+  text-align: center;
+  padding: 60px;
+  color: #6b7280;
+}
+
+.recommendations-spinner {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 15px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #ed2939;
+  border-radius: 50%;
+  animation: recommendationSpin 0.8s linear infinite;
+}
+
+@keyframes recommendationSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.recommendations-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.recommendations-empty > div {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.recommendations-empty h3 {
+  color: #071b33;
+  margin: 5px 0;
+}
+
+.recommendations-empty p {
+  margin: 5px 0;
+}
+
+@media (max-width: 900px) {
+  .recommendation-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-recommendations-page {
+    padding: 18px;
+  }
+
+  .recommendations-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .recommendation-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendations-toolbar {
+    flex-direction: column;
+  }
+}

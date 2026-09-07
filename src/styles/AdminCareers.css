@@ -1,0 +1,688 @@
+/* =========================================================
+   CAREERAI ADMIN - CAREERS
+   Dark Blue + Red Theme
+========================================================= */
+
+.admin-page {
+    min-height: 100vh;
+    padding: 32px;
+    box-sizing: border-box;
+    background: #f3f6fa;
+    color: #071d38;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: #071d38;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.page-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-button {
+    border: none;
+    background: #ef3340;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-button:hover {
+    background: #d92332;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(239, 51, 64, 0.25);
+}
+
+.primary-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   ADMIN PANEL
+========================================================= */
+
+.admin-panel {
+    background: #fff;
+    border: 1px solid #e1e7ef;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 10px 35px rgba(7, 29, 56, 0.07);
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.panel-header h3 {
+    margin: 0;
+    color: #071d38;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.panel-header p {
+    margin: 5px 0 0;
+    color: #718096;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CAREER TABLE
+========================================================= */
+
+.admin-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e3e8ef;
+    border-radius: 14px;
+}
+
+.admin-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.admin-table thead {
+    background: #071d38;
+}
+
+.admin-table th {
+    padding: 16px 18px;
+    color: #fff;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.admin-table td {
+    padding: 16px 18px;
+    color: #334155;
+    font-size: 14px;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.admin-table tbody tr {
+    transition: 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+    background: #fff7f8;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   CAREER TITLE
+========================================================= */
+
+.career-title {
+    color: #071d38;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.category-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #e8f0f9;
+    border: 1px solid #d2dfed;
+    color: #12395f;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DEMAND
+========================================================= */
+
+.demand-high,
+.demand-medium,
+.demand-low {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.demand-high {
+    background: #ffe7ea;
+    color: #d92332;
+    border: 1px solid #ffc9cf;
+}
+
+.demand-medium {
+    background: #fff2d9;
+    color: #a36500;
+    border: 1px solid #f2d59c;
+}
+
+.demand-low {
+    background: #e8f7ef;
+    color: #16834d;
+    border: 1px solid #bee8d0;
+}
+
+
+/* =========================================================
+   SALARY
+========================================================= */
+
+.salary {
+    color: #071d38;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.action-button {
+    border: none;
+    padding: 8px 13px;
+    margin-right: 6px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.action-button.edit {
+    background: #071d38;
+    color: #fff;
+}
+
+.action-button.edit:hover {
+    background: #12395f;
+}
+
+.action-button.delete {
+    background: #ef3340;
+    color: #fff;
+}
+
+.action-button.delete:hover {
+    background: #c91f2c;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background: rgba(4, 19, 39, 0.72);
+    backdrop-filter: blur(5px);
+}
+
+
+/* =========================================================
+   CAREER MODAL
+========================================================= */
+
+.career-modal {
+    width: min(900px, 100%);
+    max-height: 90vh;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.3);
+
+    animation: careerModalIn 0.2s ease;
+}
+
+@keyframes careerModalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.modal-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 24px 30px;
+
+    background: #fff;
+
+    border-bottom: 1px solid #e5eaf0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #071d38;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.modal-header p {
+    margin: 5px 0 0;
+    color: #718096;
+    font-size: 13px;
+}
+
+.modal-close {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f1f4f8;
+    color: #071d38;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #ffe7ea;
+    color: #ef3340;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.career-form {
+    padding: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: #071d38;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #cfd8e3;
+    border-radius: 10px;
+
+    background: #fff;
+    color: #172b42;
+
+    padding: 13px 14px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    height: 46px;
+}
+
+.form-group textarea {
+    min-height: 115px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #ef3340;
+
+    box-shadow:
+        0 0 0 3px rgba(239, 51, 64, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa7b5;
+}
+
+
+/* =========================================================
+   SALARY INPUT
+========================================================= */
+
+.salary-input {
+    position: relative;
+}
+
+.salary-input span {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #071d38;
+    font-weight: 700;
+}
+
+.salary-input input {
+    padding-left: 32px;
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #e5eaf0;
+}
+
+.cancel-button {
+    border: 1px solid #cbd5e1;
+
+    background: #fff;
+    color: #334155;
+
+    padding: 11px 21px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background: #f5f7fa;
+}
+
+.save-button {
+    border: none;
+
+    background: #ef3340;
+    color: #fff;
+
+    padding: 11px 23px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.save-button:hover {
+    background: #d92332;
+
+    box-shadow:
+        0 7px 18px rgba(239, 51, 64, 0.25);
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-state {
+    padding: 60px 20px;
+    text-align: center;
+
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    margin-bottom: 12px;
+    font-size: 48px;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+    color: #071d38;
+    font-size: 20px;
+}
+
+.empty-state p {
+    margin: 0;
+    color: #718096;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-state {
+    padding: 15px 18px;
+
+    border: 1px solid #ffc8ce;
+    border-radius: 10px;
+
+    background: #fff0f1;
+
+    color: #c92130;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.admin-search {
+    width: 100%;
+    max-width: 420px;
+
+    box-sizing: border-box;
+
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #cfd8e3;
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.admin-search:focus {
+    border-color: #ef3340;
+
+    box-shadow:
+        0 0 0 3px rgba(239, 51, 64, 0.1);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .admin-page {
+        padding: 20px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .career-form {
+        padding: 20px;
+    }
+
+    .modal-header {
+        padding: 20px;
+    }
+
+    .modal-overlay {
+        padding: 10px;
+    }
+
+    .career-modal {
+        max-height: 95vh;
+        border-radius: 15px;
+    }
+
+    .modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+    }
+}
